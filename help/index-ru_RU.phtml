@@ -15,27 +15,38 @@
     <div class="g-help-icon">
         <img src="<?= $assetsUrl, '/images/icon.svg' ?>" />
     </div>
-    <p>Информация о сайте - это шаблон заголовка, ключевые слова, описание, разметка страниц, то есть, всё то, что имеет общий характер и применяется на страницах сайта.</p>
-    <p>Каждая страница сайта имеет свои атрибуты (заголовок, ключевые слова и т.д.) если они не указаны, буду применяться атрибуты соответствующие текущему языку.</p>
-    <h2>Атрибуты страницы по умолчанию</h2>
+    <p>Информация о сайте включает общие метаданные и структурные настройки, применяемые ко всем страницам.</p>
+    <p>Каждая страница сайта обладает набором настраиваемых атрибутов (заголовок, ключевые слова и др.). Если явные значения не заданы для конкретной страницы, автоматически применяются атрибуты по умолчанию, соответствующие текущему языку интерфейса.</p>
+    <h2>Атрибуты страницы: по умолчанию и по языкам</h2>
     <ul class="g-help-list">
-        <li><b>Шаблон загаловка.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;</li>
-        <li><b>Заголовок.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;</li>
-        <li><b>Автор.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;</li>
-        <li><b>Ключевые слова.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;</li>
-        <li><b>Описание.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;</li>
-        <li><b>Изображение.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</li>
-        <li><b>Индексирование.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</li>
+        <li><span class="g-help-fld g-help-fld_text"></span> <b>Шаблон заголовка.</b> В шаблон заголовка страницы динамически подставляется заголовок материала (статьи), его категория или любое значение установленное компонентом веб-приложения; при этом сохраняется форматирование и структура шаблона (префиксы, суффиксы, разделители);</li>
+        <li><span class="g-help-fld g-help-fld_text"></span> <b>Заголовок.</b> Заголовок страницы (тег &lt;title&gt;) отображается во вкладке браузера;</li>
+        <li><span class="g-help-fld g-help-fld_text"></span> <b>Автор.</b> Автор контента на странице. Наличие указанного автора может повышать авторитетность материалов в глазах поисковых систем, особенно если имя автора узнаваемо;</li>
+        <li><span class="g-help-fld g-help-fld_textarea"></span> <b>Ключевые слова.</b> Применяется для указания ключевых слов и фраз, описывающих содержание страницы;</li>
+        <li><span class="g-help-fld g-help-fld_textarea"></span> <b>Описание.</b> Краткое описание содержимого страницы для поисковых систем и пользователей. Оно не видно на самой странице, но может отображаться в поисковой выдаче — в сниппете под заголовком.<br> Что даёт описание: контролирует текст в сниппете, повышает кликабельность (CTR), улучшает поведенческие метрики, используется в соцсетях и мессенджерах;</li>
+        <li><span class="g-help-fld g-help-fld_text"></span> <b>Изображение.</b> Логотип (в виде изображения) используется в публикациях в социальных сетях как элемент фирменного стиля.</li>
+        <li><span class="g-help-fld g-help-fld_combo"></span> <b>Индексирование.</b> Для индексирования сайта в поисковых системах роботами, необходимо указать директивы:
+            <ul>
+                <li>noindex — страница не попадёт в результаты поиска (Яндекс, Google и т.д.). Пользователь не найдёт её по запросу.</li>
+                <li>nofollow — робот не будет переходить по ссылкам на странице и не будет передавать через них «вес» (сигналы ранжирования). </li>
+                <li>noindex, nofollow — страница скрыта из выдачи, а её ссылки не используются для обхода и передачи авторитета.</li>
+            </ul>
+        </li>
     </ul>
 
     <h3>Микроразметка сайта для поисковых систем</h3>
     <ul class="g-help-list">
-        <li><b>Open Graph.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;</li>
-        <li><b>Twitter Card.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;</li>
-        <li><b>Schema org.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;</li>
-        <li><b>ВКонтакте.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;</li>
+        <li><span class="g-help-fld g-help-fld_checkbox"></span> <b>Open Graph.</b> Флаг включает автоматическую разметку Open Graph для красивого превью ссылок в соцсетях и мессенджерах. Система сама подставит заголовок, описание и картинку, а также обеспечит корректный канонический URL для избежания дублей превью;</li>
+        <li><span class="g-help-fld g-help-fld_checkbox"></span> <b>Twitter Card.</b> Флаг включает автоматическую разметку Twitter Cards (X Cards), чтобы ссылки на страницы красиво отображались в X: с заголовком, описанием, крупной картинкой и (при необходимости) встроенным плеером. Система сама подставит нужные данные и обеспечит корректный канонический URL для избежания дублей превью.;</li>
+        <li><span class="g-help-fld g-help-fld_checkbox"></span> <b>Schema org.</b> Флаг включает автоматическую разметку Schema.org для того, чтобы поисковые системы могли формировать расширенные сниппеты в выдаче: показывать цены и наличие для товаров, даты и авторов для статей, быстрые ответы для FAQ. Система сама подставляет данные из полей страницы (название, описание, изображение, цену и т. д.) в JSON-LD, выбирает подходящий тип сущности (Product, Article и др.) и следит, чтобы значения совпадали с тем, что реально отображается пользователю;</li>
+        <li><span class="g-help-fld g-help-fld_checkbox"></span> <b>ВКонтакте.</b> Флаг включает автоматическую разметку ВКонтакте для красивого превью ссылки в ленте VK: с заголовком, кратким описанием и обложкой. Вам не нужно прописывать код вручную — система сама возьмёт данные из полей карточки страницы.</li>
     </ul>
 
     <h3>Подпись приложения</h3>
-    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua</p>
+    <p>Параметры определяют способ указания сведений о системе или инструменте, с помощью которого создана страница:</p>
+    <ul class="g-help-list">
+        <li><span class="g-help-fld g-help-fld_checkbox"></span> <b>в HTML странице.</b> Флаг включает добавление метатега generator на страницу сайта — он сообщает, какой системой или инструментом создана страница;</li>
+        <li><span class="g-help-fld g-help-fld_checkbox"></span> <b>в HTTP-заголовке.</b> Флаг включает добавление HTTP-заголовка X-Powered-By в ответ сервера, указывающего на использование системы или инструмента;</li>
+        <li><span class="g-help-fld g-help-fld_text"></span> <b>подписать как.</b> Указанное значение добавляется в качестве метатега generator на страницу сайта.</li>
+    </ul>
 </article>

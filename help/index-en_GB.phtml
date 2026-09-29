@@ -15,27 +15,38 @@
     <div class="g-help-icon">
         <img src="<?= $assetsUrl, '/images/icon.svg' ?>" />
     </div>
-    <p>Site information is a title template, keywords, description, page layout, that is, everything that is of a general nature and is used on the pages of the site..</p>
-    <p>Each page of the site has its own attributes (title, keywords, etc.) if they are not specified, the attributes corresponding to the current language will be applied.</p>
-    <h2>Default page attributes</h2>
+    <p>Site information includes general metadata and structural settings that apply to all pages.</p>
+    <p>Each page has a set of configurable attributes (title, keywords, etc.). If specific values are not defined for a particular page, default attributes corresponding to the current interface language are automatically applied.</p>
+    <h2>Page attributes: default and language-specific</h2>
     <ul class="g-help-list">
-        <li><b>Header template.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;</li>
-        <li><b>Header.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;</li>
-        <li><b>Author.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;</li>
-        <li><b>Keywords.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;</li>
-        <li><b>Description.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;</li>
-        <li><b>Image.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</li>
-        <li><b>Indexing.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</li>
+        <li><span class="g-help-fld g-help-fld_text"></span> <b>Title template.</b> The content (article) title, its category, or any value set by the web application component is dynamically inserted into the page title template, while preserving the template's formatting and structure (prefixes, suffixes, separators);</li>
+        <li><span class="g-help-fld g-help-fld_text"></span> <b>Title.</b> The page title (the &lt;title&gt; tag) displayed in the browser tab;</li>
+        <li><span class="g-help-fld g-help-fld_text"></span> <b>Author.</b> The author of the page content. Specifying an author can boost the authority of the content in the eyes of search engines, especially if the author is well-known;</li>
+        <li><span class="g-help-fld g-help-fld_textarea"></span> <b>Keywords.</b> Used to specify keywords and phrases that describe the page content;</li>
+        <li><span class="g-help-fld g-help-fld_textarea"></span> <b>Description.</b> A brief description of the page content for search engines and users. It is not visible on the page itself but may appear in search results—specifically in the snippet below the title.<br> Benefits of the description: it controls the snippet text, increases click-through rate (CTR), improves behavioral metrics, and is used when sharing on social media and messaging apps;</li>
+        <li><span class="g-help-fld g-help-fld_text"></span> <b>Image.</b> A logo (image-based) used in social media posts as part of the brand identity.</li>
+        <li><span class="g-help-fld g-help-fld_combo"></span> <b>Indexing.</b> To enable search engine robots to index the site, you must specify the following directives:
+            <ul>
+                <li>noindex — the page will not appear in search results (Yandex, Google, etc.). Users will not find it via search queries.</li>
+                <li>nofollow — the crawler will not follow links on the page and will not pass "weight" (ranking signals) through them.</li>
+                <li>noindex, nofollow — the page is hidden from search results, and its links are not used for crawling or passing authority.</li>
+            </ul>
+        </li>
     </ul>
 
-    <h3>Микроразметка сайта для поисковых систем</h3>
+    <h3>Website Micro-markup for Search Engines</h3>
     <ul class="g-help-list">
-        <li><b>Open Graph.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;</li>
-        <li><b>Twitter Card.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;</li>
-        <li><b>Schema org.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;</li>
-        <li><b>ВКонтакте.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;</li>
+        <li><span class="g-help-fld g-help-fld_checkbox"></span> <b>Open Graph.</b> This option enables automatic Open Graph markup for attractive link previews on social networks and messaging apps. The system automatically populates the title, description, and image, and ensures the correct canonical URL is used to prevent duplicate previews;</li>
+        <li><span class="g-help-fld g-help-fld_checkbox"></span> <b>Twitter Card.</b> This option enables automatic Twitter Card (X Card) markup so that page links display attractively on X—featuring a title, description, large image, and (if applicable) an embedded player. The system automatically populates the necessary data and ensures the correct canonical URL is used to prevent duplicate previews;</li>
+        <li><span class="g-help-fld g-help-fld_checkbox"></span> <b>Schema.org.</b> This option enables automatic Schema.org markup, allowing search engines to generate rich snippets in search results—such as displaying prices and availability for products, dates and authors for articles, or quick answers for FAQs. The system automatically maps page fields (title, description, image, price, etc.) to JSON-LD, selects the appropriate entity type (Product, Article, etc.), and ensures the data matches what is actually displayed to the user;</li>
+        <li><span class="g-help-fld g-help-fld_checkbox"></span> <b>VKontakte.</b> This option enables automatic VKontakte markup for attractive link previews in the VK feed—featuring a title, brief description, and cover image. You don’t need to write the code manually—the system will automatically pull the data from the page card fields.</li>
     </ul>
 
     <h3>Application signature</h3>
-    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua</p>
+    <p>Parameters determine how information is specified regarding the system or tool used to create the page:</p>
+    <ul class="g-help-list">
+        <li><span class="g-help-fld g-help-fld_checkbox"></span> <b>in the HTML page.</b> This option enables the addition of a `generator` meta tag to the webpage, indicating the system or tool used to create it;</li>
+        <li><span class="g-help-fld g-help-fld_checkbox"></span> <b>in the HTTP header.</b> This option enables the addition of an `X-Powered-By` HTTP header to the server response, indicating the system or tool used;</li>
+        <li><span class="g-help-fld g-help-fld_text"></span> <b>sign as.</b> The specified value is added as a `generator` meta tag to the webpage.</li>
+    </ul>
 </article>
